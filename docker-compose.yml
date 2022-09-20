@@ -54,3 +54,14 @@ services:
       - 3308
     volumes:
       - ./docker/mysql:/var/lib/mysql
+
+  node:
+    build:
+      context: ./docker/node
+      args:
+        NODE_BUILD_DIR: /usr/src/app
+        USER_ID: ${USER_UID:-1000}
+        USER_NAME: ${USER_NAME:-dockeruser}
+    volumes:
+       - .:/usr/src/app
+    tty: true

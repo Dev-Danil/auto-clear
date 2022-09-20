@@ -1,13 +1,19 @@
 {
+    "name": "auto-clear",
+    "version": "1.0.0",
+    "description": "pet-project",
     "private": true,
+    "license": "UNLICENSED",
+    "author": "Lone developer",
+    "main": "",
     "scripts": {
         "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
+        "development": "node/node_modules/.bin/mix",
+        "watch": "node/node_modules/.bin/mix watch",
+        "watch-poll": "node/node_modules/.bin/mix watch -- --watch-options-poll=1000",
+        "hot": "node/node_modules/.bin/mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "node/node_modules/.bin/mix --production"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
